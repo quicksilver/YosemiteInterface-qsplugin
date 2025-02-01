@@ -1,5 +1,10 @@
 #import "BBYosemiteInterface.h"
 
+@interface QSPreferencesController : NSWindowController <NSToolbarDelegate, NSWindowDelegate, NSSplitViewDelegate>
+    - (QSPreferencePane *)showPaneWithIdentifier:(NSString *)identifier;
+@end
+
+
 @interface BBYosemiteInterface () {
     CGRect initialRect;
 }
@@ -12,7 +17,7 @@
 }
 
 - (IBAction)customize:(id)sender{
-    [[NSClassFromString(@"QSPreferencesController") sharedInstance] showPaneWithIdentifier:@"BBYosemitePrefs"];
+    [(QSPreferencesController *)[NSClassFromString(@"QSPreferencesController") sharedInstance] showPaneWithIdentifier:@"BBYosemitePrefs"];
 }
 
 - (void)windowDidLoad {
@@ -113,7 +118,6 @@
 
 - (void)showMainWindow:(id)sender {
     [[self window] setFrame:[self rectForState:[self expanded]]  display:YES];
-    if ([[self window] isVisible]) [[self window] pulse:self];
     [super showMainWindow:sender];
     //    Does this need to be here?
     [[[self window] contentView] setNeedsDisplay:YES];
