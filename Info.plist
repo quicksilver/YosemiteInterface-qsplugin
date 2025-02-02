@@ -19,12 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.1</string>
 	<key>CFBundleVersion</key>
-	<string>7</string>
-	<key>QSRequirements</key>
-	<dict>
-		<key>minHostVersion</key>
-		<string>4039</string>
-	</dict>
+	<string>A</string>
 	<key>QSPlugIn</key>
 	<dict>
 		<key>author</key>
@@ -34,21 +29,26 @@
 			<string>Interfaces</string>
 		</array>
 		<key>description</key>
-		<string>A simple, elegant theme matching Yosemite&apos;s Spotlight. Light and Dark Mode supported</string>
+		<string>A simple, elegant theme matching Yosemite's Spotlight. Light and Dark Mode supported</string>
 		<key>extendedDescription</key>
 		<string>&lt;h2&gt;Yosemite Interface&lt;/h2&gt;
-&lt;p&gt;A beautiful, elegant interface similar to macOS&apos;s spotlight interface.&lt;/p&gt;
+&lt;p&gt;A beautiful, elegant interface similar to macOS's spotlight interface.&lt;/p&gt;
 &lt;h3&gt;Colors&lt;/h3&gt;
-&lt;p&gt;Both light mode and dark mode are supported by this plugin. Choose your color preferences by enabling the Yosemite interface in the Appearance preferences, and then clicking the &apos;Customize&apos; button.&lt;/p&gt;
+&lt;p&gt;Both light mode and dark mode are supported by this plugin. Choose your color preferences by enabling the Yosemite interface in the Appearance preferences, and then clicking the 'Customize' button.&lt;/p&gt;
 
 
 &lt;h3&gt;Credits&lt;/h3&gt;
 
-This plugin was created by Mikkel Malmberg (&lt;a href=&quot;https://github.com/mikker/&quot;&gt;@mikker&lt;/a&gt;), and updated by the Patrick Robertson and the Quicksilver Development Team.
+This plugin was created by Mikkel Malmberg (&lt;a href="https://github.com/mikker/"&gt;@mikker&lt;/a&gt;), and updated by the Patrick Robertson and the Quicksilver Development Team.
 </string>
 	</dict>
 	<key>QSRegistration</key>
 	<dict>
+		<key>QSCommandInterfaceControllers</key>
+		<dict>
+			<key>Yosemite</key>
+			<string>BBYosemiteInterface</string>
+		</dict>
 		<key>QSPreferencePanes</key>
 		<dict>
 			<key>BBYosemitePrefs</key>
@@ -69,11 +69,13 @@ This plugin was created by Mikkel Malmberg (&lt;a href=&quot;https://github.com/
 				<string>hidden</string>
 			</dict>
 		</dict>
-		<key>QSCommandInterfaceControllers</key>
-		<dict>
-			<key>Yosemite</key>
-			<string>BBYosemiteInterface</string>
-		</dict>
+	</dict>
+	<key>QSRequirements</key>
+	<dict>
+		<key>minHostVersion</key>
+		<string>4039</string>
+		<key>version</key>
+		<string>4001</string>
 	</dict>
 </dict>
 </plist>
